@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculatorcss.css">
+    <script src="calculatorjavascript.js"></script>
+ 
+</head>
+<body>
+     
+    <!--table calculator-->
+    
+    <div id="calculatortable">
+
+        <div id="inputandans">
+            <input id="answer" type="text">
+            <p id="ans">ANSWER</p>
+        </div>       
+        <table>
+            <tr > 
+               <td id="curv1">
+                  <td id="curv">
+                    <div id="back">
+                        <button id="backbutton"  onclick=" back()">BACK</button>
+                    </div>
+                  </td>
+
+                </td>
+                <td id="curv">
+                    <div id="percentage">
+                        <button id="percentagebutton"  onclick="document.getElementById('answer').value += '%' ">%</button>
+                    </div>
+                </td>
+                <td id="curv4">
+                    <div id="division">
+                        <button id="divisionbutton"  onclick="document.getElementById('answer').value += '/' ">/</button>        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="7">
+                        <button id="seven" onclick="document.getElementById('answer').value += 7">7</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="8">
+                        <button id="eight" onclick="document.getElementById('answer').value += 8">8</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="9">
+                        <button id="nine" onclick="document.getElementById('answer').value += 9" > 9 </button>
+                    </div>
+                </td>
+                <td>
+                    <div id="multiply">
+                        <button id="multiplicationbutton"  onclick="document.getElementById('answer').value += '*' ">*</button>        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="4">
+                        <button id="four"  onclick="document.getElementById('answer').value += 4 ">4</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="5">
+                        <button id="five"  onclick="document.getElementById('answer').value += 5">5</button>
+                    </div>  
+                </td>
+                <td>
+                    <div id="6">
+                        <button id="six"  onclick="document.getElementById('answer').value += 6 ">6</button>
+                    </div>  
+                </td>
+                <td>
+                    <div id="minus">
+                        <button id="minusbutton"  onclick="document.getElementById('answer').value += '-' ">-</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="1">
+                        <button id="one"  onclick="document.getElementById('answer').value += 1 ">1</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="2">
+                        <button id="two"  onclick="document.getElementById('answer').value += 2 ">2</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="3">
+                        <button id="three"  onclick="document.getElementById('answer').value += 3 ">3</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="plus">
+                        <button id="plusbutton"  onclick="document.getElementById('answer').value +=  '+'">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="reset">
+                        <button id="resetbutton"  onclick="answer.value = ' '; reset(); ">RESET</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="0">
+                        <button id="zero"  onclick="document.getElementById('answer').value += 0 ">0</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="dot">
+                        <button id="dotbutton"  onclick="document.getElementById('answer').value += '.'">.</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="eual">
+                        <button id="equalbutton"  onclick="answerofexpression(); ">=</button>
+                    </div>
+                </td>
+            </tr>       
+        </table>
+    </div>  
+</body>
+</html>
