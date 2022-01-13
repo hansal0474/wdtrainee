@@ -1,0 +1,65 @@
+#calculatortable{
+    margin-left: auto;
+    margin-right: auto;
+    height: 469.6;
+    width: 220px;
+    background-color:#2a2d37;
+    border-radius: 10px;
+}
+
+#answer{
+    color: ivory; 
+    width: 216px; 
+    padding-top: 30px;
+    border-radius: 5px;
+    border: 0px;
+    text-align: right;
+    background-color: #2a2d37;  
+}
+
+#ans{
+    font-size: 40px; 
+    color: ivory; 
+    text-align: right;
+}
+
+table{
+    border-radius: 10px;
+    text-align: center;
+    background-color: #393c46;
+    border-top-right-radius: 20px;
+    width: 220px;
+}
+
+#inputandans{
+    height: 200px;
+    width: 216px;
+}
+
+button{
+    background-color: #393c46;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px; 
+    border-radius: 20px;
+}
+
+button:hover{
+    background-color: rgb(71, 71, 71);
+    border-radius: 150px;
+    width:50px;
+    height: 50px;
+}
+
+#equalbutton, #plusbutton, #minusbutton, #multiplicationbutton{
+    color: orangered;
+}
+
+#percentagebutton, #backbutton, #divisionbutton{
+    color: greenyellow;
+}
+
+#zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #resetbutton, #dotbutton{
+    color: white;
+}
