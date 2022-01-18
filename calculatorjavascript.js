@@ -6,7 +6,6 @@ function answerofexpression() {
 }
 */
 
-
 function calc() {
     let inputext = (document.getElementById("answer").value);
     const array = inputext.split("");
@@ -144,8 +143,6 @@ function modulo() {
     let result = firstoprandnumber % secondoprandnumber;
     document.getElementById("ans").innerHTML = result; 
 } 
-
-
 
 function reset() {
     let displaytext = (document.getElementById('answer').value);

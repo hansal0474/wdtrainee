@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <script>
+        //function will recall after 1 second
+          setInterval (datefun,1000)
+        function datefun() {
+            const d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            //timing  
+            m = checktime(m);
+            s = checktime(s);
+            //greeting function
+            greetingfun(h);
+            h = twelvehourclock(h);
+            //session check
+            session = "AM"; 
+            session = checksession(h); 
+            //printing time
+            document.getElementById("date").innerHTML = h + ":" + m + ":" + s + ":" + session; 
+        }
+        //checking time
+        function checktime(s) { 
+            if (s<10){
+                s = "0" + s;
+            }
+                return s;
+        }
+        //if need 24 hour clock comment-out twelvehourclock function
+        function twelvehourclock(h) {
+            if(h>12){
+            h = h - 12;
+            }
+            return h;
+        }
+        //session checking
+        function checksession(h){
+            if (h > 11){
+                session = "PM"
+            }
+            return session;
+        }
+        //greeting
+        function greetingfun(h) {
+            if(h > 0 && h < 11){
+                document.getElementById("greeting").innerHTML = "Good Morning";
+            }
+            else if(h > 11 && h < 18){
+                document.getElementById("greeting").innerHTML = "Good Afternoon";
+            }
+            else if (h > 17 && h < 21) {
+                document.getElementById("greeting").innerHTML = "Good Evening";
+            }
+            else if(h > 21){
+                document.getElementById("greeting").innerHTML = "Good Night";
+            }
+        }
+    </script>
+
+</head>
+<body  onload="datefun()">
+    <p id="date"></p>
+    <p id="greeting"></p>
+</body>
+</html>
+
+
+
