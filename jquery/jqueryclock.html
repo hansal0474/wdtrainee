@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clock</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         //function will recall after 1 second
-          setInterval (datefun,1000)
+        setInterval (datefun,1000)
+        
         function datefun() {
             const d = new Date();
             let h = d.getHours();
@@ -23,9 +25,9 @@
             session = "AM"; 
             session = checksession(h); 
             //oddevan
-            oddorevan();
+            oddorevan(s);
             //printing time
-            document.getElementById("date").innerHTML = h + ":" + m + ":" + s + ":" + session; 
+            $('#date').text( h + ":" + m + ":" + s + ":" + session) 
         }
         //checking time
         function checktime(s) { 
@@ -51,23 +53,24 @@
         //greeting
         function greetingfun(h) {
             if(h > 0 && h < 11){
-                document.getElementById("greeting").innerHTML = "Good Morning";
+                $('#greeting').text("Good Morning")
             }
             else if(h > 11 && h < 18){
-                document.getElementById("greeting").innerHTML = "Good Afternoon";
+                $('#greeting').text("Good Afternoon")
             }
             else if (h > 17 && h < 21) {
-                document.getElementById("greeting").innerHTML = "Good Evening";
+                $('#greeting').text("Good Evaning")
             }
             else if(h > 21){
-                document.getElementById("greeting").innerHTML = "Good Night";
+                $('#greeting').text("Good Night")
             }
         }
-        function oddorevan(h) {
-            if (h % 2 === 0) {
-                document.getElementById("oddorevan").innerHTML = "evan"
+        //oddevan function
+        function oddorevan(s) {
+            if (s % 2 === 0) {
+                $('#oddorevan').text("evan")
             }else{
-                document.getElementById("oddorevan").innerHTML = "odd"
+                $('#oddorevan').text("odd")
             }
             
         }

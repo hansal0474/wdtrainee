@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    #inputid, #userpassword{
+       box-sizing: border-box;
+       height: 20px;
+       width: 100px;
+       border: none;
+       border-bottom: 2px solid gray;
+    }
+
+    #submitbutton{
+        background-color: gray;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        margin-left: 90px;
+    }
+
+    td> #submitbutton{
+        margin-top: 30px;
+    }
+
+    #submitbutton:hover{
+        background-color: rgb(58, 57, 57) ;
+    }
+
+    table{
+        border-spacing: 10px;
+        box-shadow: 2px 2px 10px gray;
+        margin-top: 30px;
+        padding: 40px 5px 40px 5px;
+        margin-left: auto;
+        margin-right: auto;  
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label for="inputid">User Id:</label>
+            </td>
+            <td>
+                <input type="text" name="username" id="inputid" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="userpassword">Password:</label>
+            </td>
+            <td>
+                <input type="password" name="password" id="userpassword" value="" maxlength="6">
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <input type="submit" value="SUBMIT" onclick="validation();" id="submitbutton">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        $('#submitbutton').click(function validation() {
+            
+            if ($('#inputid').val() === "" && $('#user').val() === "") {
+                alert("Enter User Id: and Password:")
+            }else if ($('#inputid').val() === "hansal" && $('#user').val() === "123456") {
+                
+            }else if (0 === 0) {
+                alert("Hello :" + $('#inputid').val() + ": You are new user. You need to Register first:");
+            }
+            
+        })
+    </script>
+</body>
+</html>
