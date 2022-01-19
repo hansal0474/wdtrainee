@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOdolist</title>
+    <script src="todolistjavascript.js"></script>
+    <style>
+        body{
+            text-align: center;
+        }
+        #list{
+            list-style-type: none;   
+        }
+        table{
+            border: 2px solid rgb(102, 96, 96);
+            margin-left: auto;
+            margin-right: auto; 
+            margin-top: 50px;
+            width: 400px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>TO-DO list</h1>
+    <div>
+        <label for="input">
+            Enter Things TO-DO
+        </label>
+        <input type="text" name="todoinput" id="todoinputid">
+        <button id="enter" onclick="add();">ADD</button>
+    </div>
+    <table>
+        <th colspan="2">DATA DISPLAY HERE</th>
+        <tr>
+            <td  id="list">
+
+            </td>
+            <td id="buttondata">
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>QUIZ</h1>
+    <form id="answer">
+        <pre>
+            <p>[1]:What is java script</p><div id="a1">   
+        <input type="radio" name="q1" id="q1a1" value="Language"><label for="q1a1">Language</label>
+        <input type="radio" name="q1" id="q2a2" value="Scripting language"><label for="q2a2">Scripting language</label>
+        <input type="radio" name="q1" id="q3a3" value="Programming language"><label for="q3a3">Programming language</label>  
+        </pre>
+        <pre>
+            <p>[2]:What is full-form of XML</p>
+        <input type="radio" name="q2" value="Extensible markup language">Extensible markup language
+        <input type="radio" name="q2" value="Markup language">Markup language
+        <input type="radio" name="q2" value="Hyper text markup language ">Hyper text markup language  
+        </pre>
+    </form>
+    <button onclick="result()">CHECK RESULT</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+       function result() {
+            let item1 = document.querySelector('input[name = "q1"]:checked');
+            let item2 = document.querySelector('input[name = "q2"]:checked');
+            if(item1.value === "Scripting language"){
+                document.getElementById("result1").style.color = "green";
+            }else{
+                document.getElementById("result1").style.color = "red";
+            }
+
+            if(item2.value === "Extensible markup language"){
+                document.getElementById("result2").style.color = "green";
+            }else{
+                document.getElementById("result2").style.color = "red";
+            }
+            document.getElementById("result1").innerHTML = item1.value;
+            document.getElementById("result2").innerHTML = item2.value;   
+        }
+    </script> 
+</body>
+</html>

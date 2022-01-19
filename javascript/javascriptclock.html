@@ -23,7 +23,7 @@
             session = "AM"; 
             session = checksession(h); 
             //oddevan
-            oddorevan();
+            oddorevan(s);
             //printing time
             document.getElementById("date").innerHTML = h + ":" + m + ":" + s + ":" + session; 
         }
@@ -63,8 +63,9 @@
                 document.getElementById("greeting").innerHTML = "Good Night";
             }
         }
-        function oddorevan(h) {
-            if (h % 2 === 0) {
+        //oddevan function
+        function oddorevan(s) {
+            if (s % 2 === 0) {
                 document.getElementById("oddorevan").innerHTML = "evan"
             }else{
                 document.getElementById("oddorevan").innerHTML = "odd"
