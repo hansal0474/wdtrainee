@@ -1,3 +1,15 @@
+let inputdata = document.getElementById("todoinputid");
+let buttonname = document.getElementById("enter");
+inputdata.addEventListener("keyup", e =>{
+    e.preventDefault();
+    if(e.key === "Enter"){
+        add();
+    }
+})
+
+
+
+
 function add() {
     let inputdata = document.getElementById("todoinputid").value;
 
